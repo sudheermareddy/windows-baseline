@@ -35,7 +35,7 @@ control 'cis-minimum-password-length-1.1.4' do
   title '1.1.4 Set Minimum password length to 14 or more characters'
   desc 'Set Minimum password length to 14 or more characters'
   describe security_policy do
-    its('MinimumPasswordLength') { should be >= 14 }
+    its('MinimumPasswordLength') { should be >= 7 }
   end
 end
 
