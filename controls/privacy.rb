@@ -2,17 +2,6 @@
 
 title 'Windows Privacy'
 
-control 'microsoft-online-accounts' do
-  impact 1.0
-  title 'Microsoft Online Accounts'
-  desc 'Disabling Microsoft account logon sign-in option, eg. logging in without having to use local credentials and using microsoft online accounts'
-  ref 'Block Microsoft Accounts', url: 'https://technet.microsoft.com/en-us/library/jj966262(v=ws.11).aspx'
-  describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Settings\AllowYourAccount') do
-    it { should exist }
-    its('value') { should eq 0 }
-  end
-end
-
 control 'disable-windows-store' do
   impact 1.0
   title 'Disable Windows Store'
